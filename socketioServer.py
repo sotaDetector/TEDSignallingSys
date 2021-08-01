@@ -1,5 +1,8 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
+from engineio.payload import Payload
+
+Payload.max_decode_packets = 50
 
 from sigSys.sigServiceCore import sigServiceCore
 
